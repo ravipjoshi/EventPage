@@ -8,7 +8,8 @@ import SideDrawer from './SideDrawer'
 
 class Header extends Component {
     state = {
-        drawerOpen : false
+        drawerOpen : false,
+        headerShow : false
     }
 
     toggleDrawer=(value)=>{
@@ -17,6 +18,13 @@ class Header extends Component {
         })
     }
     
+    componentDidMount(){
+        window.addEventListener('scroll',this.handleScroll);
+    }
+        handleScroll=()=>{
+             console.log("user scrolling")
+        }
+   
     
     render() {
         return (
@@ -25,7 +33,7 @@ class Header extends Component {
 
                     position="fixed"
                     style ={{
-                        background:'#2f2f2f',
+                        backgroundColor:this.state.headerShow ? '#2f2f2f' : 'transperent' ,
                         boxShadow:'none',
                         padding: '10px 0px'
                 }}
