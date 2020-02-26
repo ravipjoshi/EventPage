@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import MenuIcon from '@material-ui/core/Menu'
-import IconButton from '@material-ui/core/IconButton'
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import SideDrawer from './SideDrawer' 
+
 
 class Header extends Component {
+    state = {
+        drawerOpen : false
+    }
+
+    toggleDrawer=(value)=>{
+        this.setState({
+            drawerOpen : value
+        })
+    }
+    
+    
     render() {
         return (
             <div>
@@ -22,13 +35,17 @@ class Header extends Component {
                             <div className="font_righteous header_logo_venue"> The Event </div>
                             <div className="header_logo_title"> Free Events </div>
                         </div>
-                        <IconButton 
-                            aria-label="Menu"
-                            onClick={()=> console.log("open")}
+                        <IconButton
+                             aria-label="Menu"
+                             color = "inherit"
+                             onClick={(value)=> this.toggleDrawer(true)}
                         >
-                            <MenuIcon/>
+                           <MenuIcon />
                         </IconButton>
-                   
+                        <SideDrawer
+                            open = {this.state.drawerOpen}
+                            onClose={(value)=>this.toggleDrawer(value)}
+                        />
                    </Toolbar> 
                     
                 </AppBar>
