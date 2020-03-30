@@ -6,13 +6,14 @@ import TimeUntil from './TimeUntil' ;
 const Featured = () => {
     return (
         <div style={{position:'relative'}}>
-            <Carrousel/>
+           <Carrousel/> 
            <div className="artist_name">
                 <div className="wrapper">
                      Anoushka Shankar
                 </div>
            </div> 
            <TimeUntil/>     
+           
         </div>
       
         
