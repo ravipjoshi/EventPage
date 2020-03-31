@@ -14,26 +14,26 @@ function App() {
   return (
     <div className="App" style={{ height:"1200px",background:'cornflowerblue'}}>
           
-            <Header name="header"/>
+            <Header />
           
-          <Element>
-            <Featured name="featured"/>
+          <Element name="featured">
+            <Featured />
           </Element>
-          <Element>
-            <VenueInfo name="venueinformation"/>
+          <Element  name="venueinformation">
+            <VenueInfo/>
           </Element>
-          <Element>
-            <Highlight name="highlight"/>
+          <Element name="highlights">
+            <Highlight />
           </Element>
-          <Element>
-            <Pricing name="pricing"/>
+          <Element name="pricing">
+            <Pricing />
           </Element>  
-          <Element>
-            <Location name="location"/>
+          <Element  name="location" >
+            <Location />
           </Element>
-          <Element>
-            <Footer name="footer"/>
-          </Element>
+          
+            <Footer/>
+          
     </div>
   );
 }
