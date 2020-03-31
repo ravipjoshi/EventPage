@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from "react-slick";
-import slide_one from '../../resources/images/slide_one.jpg';
-import slide_two from '../../resources/images/slide_two.jpg';
-import slide_three from '../../resources/images/slide_three.jpg';
+import slide_one from '../../resources/images/slide_1.jpg';
+import slide_two from '../../resources/images/slide_2.jpg';
+import slide_three from '../../resources/images/slide_3.jpg';
 
 const Carrousel = () => {
     
@@ -25,7 +25,7 @@ const Carrousel = () => {
                 <div>
                     <div className="carrousel_image"
                          style={{
-                             background:`url({${slide_one }})`,
+                             background:`url(${slide_one })`,
                              height:`${window.innerHeight}px`
                             }}>
                             Image1
@@ -34,7 +34,7 @@ const Carrousel = () => {
                 <div>
                     <div className="carrousel_image"
                          style={{
-                             background:`url({${slide_two} })`,
+                             background:`url(${slide_two})`,
                              height:`${window.innerHeight}px`
                             }}>
                                 image2
@@ -43,7 +43,7 @@ const Carrousel = () => {
                 <div>
                     <div className="carrousel_image"
                          style={{
-                             background:`url({${slide_three} })`,
+                             background:`url(${slide_three})`,
                              height:`${window.innerHeight}px`
                             }}>
                                 image3
