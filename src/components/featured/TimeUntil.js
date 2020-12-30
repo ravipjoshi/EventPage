@@ -4,7 +4,7 @@
  class TimeUntil extends Component {
     state ={
 
-        deadLine: 'July, 6, 2020',
+        deadLine: 'July, 6, 2021',
         days: '0',
         hours:'0',
         minutes:'0',
